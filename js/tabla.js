@@ -51,6 +51,8 @@ class Tabla{
             var btn = document.createElement("button");
             btn.setAttribute("id", "id_del_btn");
             btn.setAttribute("class", "botonDel");
+            var txtBtn = document.createTextNode("BORRAR");
+            btn.appendChild(txtBtn);
 
             var cols = [v.id, v.make, v.model, v.price, btn];
             
@@ -60,15 +62,9 @@ class Tabla{
                 var lbl = document.createTextNode(element);
                 col.appendChild(lbl);
                 fila.appendChild(col);
-
                 btn.addEventListener("click", (e)=>{
                 Vehiculo.EliminarVehiculo(v)});
-
-                
-
             })
-    
-           
     
             tbody.appendChild(fila);
         }
@@ -77,14 +73,14 @@ class Tabla{
 
     static EliminarVehiculo(){
 
-        console.log("Eloiminar");
-    //     var tabla = document.getElementById("id_tbody");
-    //     var children = tabla.children; 
+        console.log("Eliminar");
+         var tabla = document.getElementById("id_tbody");
+         var children = tabla.children;
+         while (tabla.firstChild) {
+         tabla.removeChild(tabla.firstChild);}
 
-    //     while (tabla.firstChild) {
-    //     tabla.removeChild(tabla.firstChild);
-    //   }
-    }
+       }
+
 
     static EliminarElementosLista(){
 
