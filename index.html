@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <script src="js/Vehiculo.js"></script>
+    <script src="js/Auto.js"></script>
+    <script src="js/Camioneta.js"></script>
+    <script src="js/tabla.js"></script>
+    <script src="js/modal.js"></script>
+    <link rel="stylesheet" href="css/Estilos.css">
+</head>
+<body class="body">
+    <div id="divBtn" class="divBtn" style="text-align: right; width:320px" >
+        <input type="button" value="Agregar" class="botonMod" id="btn_add" style="display: block;"/> 
+    </div>
+    <div id="id_div_filtros">
+        <br>
+            <label >Tipo</label> <br>
+            <select name="Tipo" id="id_select_tipo">
+                <option value="Auto">Auto</option>
+                <option value="Camioneta">Camioneta</option>
+            </select>
+            <br> <br>
+        </div>
+
+        <div id="divProm" class="divBtn" style="text-align: right; width:420px" >
+            <label>Promedio</label> <br>
+            <input type="text" id="id_input_promedio" class="Inputs"> <br>
+            <br>
+            <input type="button" value="Calcular Promedio" class="botonClean" id="btn_promedio" style="display: block;"/>                            
+        </div>
+        
+    <div id="id_div_tabla"></div>
+
+    
+
+
+
+    <div id="id_div_modal"></div> 
+
+    <dialog id="id_modal" >
+        <form method="dialog" id="form" >              
+            <div style="display: flex; justify-content: end;">
+                <input type="button" value="X"  class="closeButton" id="id_cerrar_modal"/>
+            </div>
+            <br>
+            <input type="hidden" id="id_id"/> 
+            <div id="divId">
+                <label >Id:</label>
+                <input type="text" id="id_id" /> 
+            </div>
+            <br>
+            <div id="divMarca">
+                <label >Marca:</label>
+                <input type="text" id="id_marca" /> 
+            </div>
+            <br>
+            <div id="divModelo">
+                <label >Modelo:</label>
+                <input type="text" id="id_modelo" /> 
+            </div>
+            <br>
+
+            <div id="divPrecio">
+                <label >Precio:</label>
+                <input type="text" id="id_precio" /> 
+            </div>
+            <br>
+            <br>
+            <div id="divTipo">
+                <select name="tipo" id="id_tipo">
+                    <option value="Auto">Auto</option>
+                    <option value="Camioneta">Camioneta</option>
+                </select>
+            </div>
+            <br>
+            <input type="button" value="Agregar" class="botonAdd" id="id_agregar_btn" style="display: none;"/> 
+            <input type="button" value="Cancelar" class="botonCancelar" id="btn_cancelar" style="display: none;"/> 
+                    
+                </div>
+            </div>
+        </form>
+    </dialog>    
+      
+</body>
+</html>
