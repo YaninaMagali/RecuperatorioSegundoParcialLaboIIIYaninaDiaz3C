@@ -48,14 +48,6 @@ class Tabla{
             fila.setAttribute("id", "id_fila" + v.id);
             fila.setAttribute("name", "name_fila"+ v.id);
 
-            
-
-
-            //btn.setAttribute("id", "id_del_btn");
-            //btn.setAttribute("class", "botonDel");
-            //var txtBtn = document.createTextNode("BORRAR");
-            //btn.appendChild(txtBtn);
-
             var cols = [v.id, v.make, v.model, v.price];
             
             cols.forEach(element =>
@@ -79,16 +71,6 @@ class Tabla{
         }
         return fila;
     }
-
-    static EliminarVehiculo(){
-
-        console.log("Eliminar");
-         var tabla = document.getElementById("id_tbody");
-         var children = tabla.children;
-         while (tabla.firstChild) {
-         tabla.removeChild(tabla.firstChild);}
-
-       }
 
 
     static EliminarElementosLista(){
