@@ -48,13 +48,15 @@ class Tabla{
             fila.setAttribute("id", "id_fila" + v.id);
             fila.setAttribute("name", "name_fila"+ v.id);
 
-            var btn = document.createElement("button");
-            btn.setAttribute("id", "id_del_btn");
-            btn.setAttribute("class", "botonDel");
-            var txtBtn = document.createTextNode("BORRAR");
-            btn.appendChild(txtBtn);
+            
 
-            var cols = [v.id, v.make, v.model, v.price, btn];
+
+            //btn.setAttribute("id", "id_del_btn");
+            //btn.setAttribute("class", "botonDel");
+            //var txtBtn = document.createTextNode("BORRAR");
+            //btn.appendChild(txtBtn);
+
+            var cols = [v.id, v.make, v.model, v.price];
             
             cols.forEach(element =>
             {
@@ -62,10 +64,17 @@ class Tabla{
                 var lbl = document.createTextNode(element);
                 col.appendChild(lbl);
                 fila.appendChild(col);
-                btn.addEventListener("click", (e)=>{
-                Vehiculo.EliminarVehiculo(v)});
+                
             })
     
+            var btn = document.createElement("button");
+            let txtBoton = document.createTextNode("Eliminar");
+            btn.appendChild(txtBoton);
+            var col = document.createElement("td");
+            col.appendChild(btn);
+            fila.appendChild(col);
+            btn.addEventListener("click", (e)=>{
+                Vehiculo.EliminarVehiculo(v)});
             tbody.appendChild(fila);
         }
         return fila;
